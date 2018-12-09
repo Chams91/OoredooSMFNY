@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+
+    <div style=" margin-left: 10%; float: left">
+    <h3 style="margin-left: 10%">Download History Archive</h3>
+    <a href="{{ path('viewpdf') }}"><img class="radio" align="center" href="{{ path('viewpdf') }}"
+                     style="margin-left: 4%" src="{{ asset('Graphicloads-Filetype-Pdf.ico')  }}"/></a>
+    </div>
+    <div style=" margin-right: 10%;float: right">
+        <h3 style="margin-right: 10%">View History Archive</h3>
+        <a href="{{ path('list') }}"><img class="radio" align="center" href="{{ path('list') }}"
+                                             style=" width:280px ;margin-left: 4%" src="{{ asset('list.png')  }}"/></a>
+    </div>
+    <div style="margin-left: 30%;">
+        <h3>Delete your History</h3>
+        <a href="{{ path('delete') }}"><img class="radio" align="center" href="{{ path('delete') }}"
+                                          style=" width:280px ;margin-left: 4%" src="{{ asset('prullenbak_318-41524.jpg')  }}"/></a>
+    </div>
+
+{% endblock %}

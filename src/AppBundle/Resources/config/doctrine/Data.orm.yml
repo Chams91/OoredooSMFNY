@@ -1,0 +1,21 @@
+AppBundle\Entity\Data:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DataRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fileName:
+            type: string
+            length: 255
+            unique: true
+        userName:
+            type: string
+            length: 255
+        consultationTime:
+            type: datetime
+    lifecycleCallbacks: {  }

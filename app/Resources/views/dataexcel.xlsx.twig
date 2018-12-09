@@ -1,0 +1,18 @@
+{% xlsdocument %}
+    {% xlssheet 'Worksheet' %}
+        {% xlsrow %}
+            {% xlscell { style: { font: { size: '12' } } } %}File Name{% endxlscell %}
+            {% xlscell { style: { font: { size: '12' } } } %}Consultation Time{% endxlscell %}
+        {% endxlsrow %}
+
+
+        {% for value in data %}
+            {% xlsrow %}
+                {% xlscell %}{{ value.filename }}{% endxlscell %}
+                {% xlscell %}{{ value.consultationTime|date('d-m-Y H:i:s') }}{% endxlscell %}
+            {% endxlsrow %}
+
+
+        {% endfor %}
+    {% endxlssheet %}
+{% endxlsdocument %}

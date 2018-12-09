@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}History List{% endblock %}
+{% block content %}
+<h2 align="center" ><b>History</b></h2>
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <th scope="col">File Name</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Consultation Time</th>
+        <th scope="col">Client Phone No'</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for d in data %}
+        <tr>
+            <th scope="row">{{ d.filename }}</th>
+            <td scope="row">{{ d.username }}</td>
+            <td scope="row">{{ d.consultationtime|date('d-m-Y H:i:s')  }}</td>
+            <td scope="row">{{ d.phoneNo}}</td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

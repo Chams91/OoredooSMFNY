@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+{% block head %}
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Ooredoo SMF{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+            <style>
+                /* web/css/my-style.css */
+                body {
+                    padding-top: 50px;
+                }
+                .box {
+                    width: 500px;
+                    margin: 200px 0;
+                }
+
+                .shape1{
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    float: left;
+                    margin-right: -50px;
+                }
+                .shape2 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    margin-top: -30px;
+                    float: left;
+                }
+                .shape3 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    margin-top: -30px;
+                    float: left;
+                    margin-left: -31px;
+                }
+                .shape4 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    margin-top: -25px;
+                    float: left;
+                    margin-left: -32px;
+                }
+                .shape5 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    float: left;
+                    margin-right: -48px;
+                    margin-left: -32px;
+                    margin-top: -30px;
+                }
+                .shape6 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    float: left;
+                    margin-right: -20px;
+                    margin-top: -35px;
+                }
+                .shape7 {
+                    position: relative;
+                    height: 150px;
+                    width: 150px;
+                    background-color: #ff0712;
+                    border-radius: 80px;
+                    float: left;
+                    margin-right: -20px;
+                    margin-top: -57px;
+                }
+                .float {
+                    position: absolute;
+                    z-index: 2;
+                }
+
+                .form {
+                    margin-left: 145px;
+                }
+            </style>
+        {% endblock %}
+    </head>
+{% endblock %}
+
+    {% block body %}
+    <body>
+
+            {% block topnav %}
+                {% include 'topnav.html.twig' %}
+            {% endblock %}
+            {% block content %}
+
+                <div style="margin-top: 10%; margin-left: 30%">
+
+                <img align="center" style="width: 350px" src="{{ asset('Ooredoo.jpg') }}">
+
+                </div>
+            {% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    </body>
+    {% endblock %}
+
+</html>
